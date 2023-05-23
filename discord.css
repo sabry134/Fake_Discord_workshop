@@ -1,0 +1,146 @@
+/* reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* global styles */
+body {
+  font-family: sans-serif;
+  background-color: #36393F;
+  color: #FFF;
+}
+
+/* discord container */
+.discord {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* sidebar */
+.discord-sidebar {
+  width: 250px;
+  height: 100%;
+  background-color: #2F3136;
+  display: flex;
+  flex-direction: column;
+}
+
+/* header */
+.discord-header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.discord-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #7289DA;
+  margin-right: 10px;
+}
+
+.discord-username {
+  font-weight: bold;
+}
+
+/* channels */
+.discord-channels {
+  padding: 10px;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.discord-channel {
+  padding: 8px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.discord-channel.active {
+  background-color: #4E5D94;
+}
+
+/* main */
+.discord-main {
+  flex-grow: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* messages container */
+.discord-messages-container {
+  flex-grow: 1;
+  max-height: calc(100% - 50px);
+  overflow-y: auto;
+  padding: 10px;
+}
+
+/* messages */
+.discord-messages {
+  display: flex;
+  flex-direction: column;
+}
+
+.discord-message {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.discord-message-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #7289DA;
+  margin-right: 10px;
+}
+
+.discord-message-username {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.discord-message-text {
+  white-space: pre-wrap;
+}
+
+/* message input */
+.discord-message-input {
+  display: flex;
+  align-items: center;
+  background-color: #40444B;
+  padding: 10px;
+  position: absolute;
+  bottom: 0;
+  width: 83%;
+}
+
+.discord-message-input input[type="text"] {
+  background-color: transparent;
+  border: none;
+  color: #FFF;
+  flex-grow: 1;
+  margin-right: 10px;
+}
+
+.discord-message-input button {
+  background-color: #7289DA;
+  border: none;
+  color: #FFF;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* disable input in announcements channel */
+.discord-channel#announcements .discord-message-input input[type="text"] {
+  pointer-events: none;
+  background-color: #8C8C8C;
+  color: #4D4D4D;
+}
+
